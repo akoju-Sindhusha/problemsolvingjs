@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let a=+prompt("enter value 1:")
-        let b=+prompt("enter value 2:")
+        let a = +prompt("enter value 1:")
+        let b = +prompt("enter value 2:")
 
-        let largest_prime=0;
+        let largest_prime = 0;
 
-        for(i=a;i<=b;i++){
-            fact=0;
-            for(j=2;j<i;j++){
-                if(i%j==0){
+        for (i = a; i <= b; i++) {
+            fact = 0;
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
                     fact++;
                     break;
                 }
             }
-            if(fact==0){
-                largest_prime=i;
+            if (fact == 0) {
+                largest_prime = i;
             }
         }
-        console.log("largest prime in given range is:",largest_prime);
-        
+        console.log("largest prime in given range is:", largest_prime);
+
     </script>
-    
+
 </body>
+
 </html>
