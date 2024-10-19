@@ -1,0 +1,328 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // day1
+        // 1
+        const pow = (base, power) => {        //power of 
+            console.log(base ** power);
+        }
+        pow(2, 5)
+
+        // 2
+        function add(n1, n2) {        //adding 2 number if given num is greater than 20
+            if (n1 > 20 || n2 > 20) {
+                console.log(n1 + n2);
+            } else {
+                console.log("please provide a value greater than 20");
+            }
+        }
+        add(10, 5)
+
+        //  3
+        let user = "user";    //login form, to check user details are correct,if wrong show where the invalid detail is
+        let password = "secret";
+
+        function login(user, password) {
+            if (user === "user" && password === "secret") {
+                console.log("welcome to websit");
+                return true
+            }
+            else if (user === "user" && password !== "secret") {
+                console.log("enter valid password");
+                return false
+
+            }
+            else if (user !== "user" && password === "secret") {
+                console.log("enter valid user name");
+                return false
+            }
+            else {
+                console.log("enter valid details");
+                return false
+            }
+        }
+        // login(user,password)
+
+        // 4
+        function show() {
+            if (login(user, password)) {
+                console.log("secret data");
+
+            } else {
+                console.log("pls login");
+
+            }
+        }
+        console.log(show());
+
+        // 5
+        for (i = 1; i <= 100; i++) {
+            console.log(i, "JS is great");
+
+        }
+        console.log(i);  //op:101
+
+        // 6
+        j = 1;
+        while (j <= 100) {
+            console.log(j);
+            j++;
+        }
+
+        // 3 tasks: 1.vote 2.money withdraw 3.speed limit
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////
+        // day3
+        // 1
+        //create read updated delete
+        role = "admin";
+        operation = "delete";
+
+        switch (role) {
+            case "admin":
+                switch (operation) {
+                    case "delete":
+                        console.log("data deleted");
+                        break;
+                    case "updated":
+                        console.log("data updated");
+                        break;
+                }
+                break;
+            case "user":
+                switch (operation) {
+                    case "delete":
+                        console.log("not allowed");
+                    case "updated":
+                        console.log("data updated");
+                }
+                break;
+
+            default:
+                console.log("unknown role");
+        }
+
+        // 2
+        // ternary operator
+
+        let num = 5;
+
+        num > 0 ? console.log("positive num") : console.log("negative num");
+
+        num > 0 ? console.log("positive num") : (num == 0) ? console.log("zero") : console.log("negative num");  //nested ternary
+
+        // 3
+        // find max num
+
+        let a = 10;
+        let b = 20;
+        let c = 30;
+
+        (a > b && a > c) ? console.log("a is max") : (b > c) ? console.log("b is max") : (c > a && c > b) ? console.log("c is max") : console.log("all are samle");
+        // only b>c is given because in frst condition a>b is false so b is grater than a, no need to mention again
+
+        // 4
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+        console.log(i);
+        // no utput because let is given
+        // if const is given i wont change so loop won't execute
+
+        // 5
+        // even number
+        for (i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+
+            }
+        }
+
+        // 6
+        // multiple of a number ex=7
+        for (i = 1; i <= 100; i++) {
+            if (i % 7 === 0) {
+                console.log(i);
+            }
+        }
+
+        // 7
+        // values between 2 numbers
+        let n1 = 150;
+        let n2 = 377;
+        count = 0;
+
+        for (i = n1; i <= n2; i++) {
+            count++
+        }
+        console.log(count); //output=277
+
+        // 8
+        // no.of even numbers between 150 and 377 ---task
+        let a1 = 150;
+        let a2 = 377;
+        count = 0;
+
+        for (i = a; i <= b; i++) {
+            if (a1 % 2 === 0) {
+                count++
+            }
+        }
+        console.log(count);
+
+        // 9
+        // no need of 3 multiple
+        for (i = 0; i < 10; i++) {
+            if (i % 3 == 0) {
+                continue;
+            }
+            console.log(i);   //output:- 1 2 4 5 7 8 10
+
+        }
+
+        // 10
+        // i want execution to break when ther is 3 multiple
+        for (i = 0; i < 10; i++) {
+            if (i % 3 == 0) {
+                break;
+            }
+            console.log(i);   //output:- 1 2 
+
+        }
+
+        // 11
+        // for negative values from -1 to -100
+
+        for (i = -1; i >= -100; i--) {
+            console.log(i);   //output:- -1 -2 -3 _ _ _ _ _ -100
+        }
+
+
+        // 12
+        // 5 multiples upto 10
+        let numb = 5;
+        for (i = 1; i <= 10; i++) {
+            console.log(numb * i);   //output:-  5 10 15 20 _ _ _ _ 50
+        }
+
+        let numb2 = 5;
+        for (i = 1; i <= 10; i++) {
+            console.log(i, "x", 5, "=", numb2 * i);   //output:-  5 10 15 20 _ _ _ _ 50
+        }
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        // day4
+        // 1
+        // no.of even numbers btwn given 2 numbers
+
+        let num1 = +prompt("enter starting number :")
+        let num2 = +prompt("enter ending number :")
+
+        count = 0;
+        for (i = num1; i <= num2; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+                count++
+
+            }
+        }
+        console.log("the count of the even numbers", count);
+
+        // 2
+        // min and max
+        let aa1 = 100;
+        let aa2 = 10;
+        let min
+        let man
+
+        if (aa1 > aa2) {
+            min = aa2;
+            max = aa1;
+        }
+        else {
+            min = aa1;
+            max = aa2;
+        }
+        console.log(min, max);
+
+        max = (a > b) ? aa1 : aa2
+        max = (a < b) ? aa2 : aa1
+
+        // 3
+        // nested loopsfor table formate
+        let table = 5;
+
+        for (i = 0; i < table; i++) {   //1 2 3 4 5 
+            for (let j = 0; j <= 20; j++) {    //1 to 20
+                console.log(i + "x" + j + "=" + i * j);
+            }
+        }
+
+        // 4
+        // to check given num is prime number or not if not prime then print the factors
+        let prime = 53;
+        let fact = 0;
+
+        for (i = 1; i < prime; i++) {
+            if (prime % i == 0) {
+                fact++
+            }
+        }
+        console.log(fact);
+
+        // prime or not
+        let prime1 = 53;
+        let fact1 = 0;
+
+        for (i = 1; i < prime1; i++) {
+            if (prime1 % i == 0) {
+                fact1++
+                break;  //important because if it get even one factor other than itself and 1 it is not prime number
+            }
+        }
+        if (fact1 == 0) {
+            console.log("prime number");
+        } else {
+            console.log("not a prime");
+        }
+        // questions on prime nearest prime,next prime,before prime,range,etc...
+        // prime_count=0;
+        // debuggerfor(i=50;i<100;i++){
+
+        // }
+
+        // 5
+        // 
+        let num = 23;
+        let found = false
+        while (!found) {
+            num = num + 1
+            fact = 0;
+            for (i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    fact++
+                    break;
+                }
+            }
+            if (fact == 0) {
+                console.log("next prime is", num);
+                found=true;
+            }
+        }
+        //  task1:before and after prime number, task2:find largest prime in a given range
+    </script>
+
+</body>
+
+</html> -->

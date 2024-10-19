@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+
+<body>
+    <script>
+        let num = +prompt("enter the value to check palindrome:");
+        let check = num;
+        let rev = 0;
+        while (num != 0) {
+            last = num % 10;
+            rev = rev * 10 + last;
+            num = Math.floor(num / 10);
+        }
+        if (rev == check) {
+            console.log("the given number " + " "+check +" "+ "is  palindrome");
+        }
+        else {
+            console.log("the given number " + " "+check +" "+ "is not a palindrome");
+
+        }
+    </script>
+
+</body>
+
+</html>
