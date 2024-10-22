@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // to print the product of lest diagonal of the practice
+        // we have to match row with the column
+
+        let mat=[[2,4,6,8],[10,12,14,16],[18,20,22,24],[26,28,30,32]];
+        let product=1;
+        for(i=0;i<mat.length;i++){
+            for(j=0;j<mat[i].length;j++){
+                if(i==j){
+                    product=product*mat[i][j];
+                }
+            }
+        }
+        console.log(product);
+        
+    </script>
+    
+</body>
+</html>
