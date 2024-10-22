@@ -19,6 +19,17 @@
             num = Math.floor(num / 10);
             power++
         }
+        while (check !== 0) {
+            digit = check % 10;
+            sum = sum + (digit ** power);
+            check = Math.floor(check / 10);
+        }
+        if (sum == final) {
+            console.log("the given number " + " " + final + " " + "is armstrong");
+
+        } else {
+            console.log("the given number " + " " + final + " " + "is not an armstrong");
+        }
 
 
     </script>

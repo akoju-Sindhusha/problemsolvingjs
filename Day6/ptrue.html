@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        num = +prompt("enter the number: ");
+        val = false;
+        while (num !== 0) {
+            digit = num % 10;
+            if (digit > 1) {
+                fact = 0;
+                for (i = 2; i < digit; i++) {
+                    if (digit % 1 == 0) {
+                        fact++;
+                        break;
+                    }
+                }
+                if (fact == 0) {
+                    val = true;
+                    break;
+                }
+            }
+            num = Math.floor(num / 10);
+        }
+        if (val) {
+            console.log(true);
+        } else {
+            console.log(false);
+
+        }
     </script>
-    
+
 </body>
+
 </html>

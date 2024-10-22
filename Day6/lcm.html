@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        let num1 = +prompt("enter the value 1:");
+        let num2 = +prompt("enter the value 1:");
+        let min = num1 > num2 ? num2 : num1;
+        let max = num1 > num2 ? num1 : num2;
+        function lcm(num1, num2) {
+            if (max % min == 0) {
+                console.log(max + "is the LCM ");
+            } else {
+                check = max;
+                while (true) {
+                    check++;
+                    if (check % min == 0 && check % max == 0) {
+                        console.log(check + "is the LCM");
+                    }
+                }
+            }
+        }
+        lcm(num1, num2);
     </script>
-    
+
 </body>
+
 </html>
