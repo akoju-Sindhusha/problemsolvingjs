@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num = 5;
+    for (i = num; i >= 1; i--) {
+      s = "";
+      for (j = num; j >= 1; j--) {
+        if (i == num || j == num || i + j == num + 1) {
+          s = s + "*" + " ";
+        } else {
+          s = s + " " + " ";
+        }
+      }
+      console.log(s);
+    }
+
+  </script>
+
+</body>
+
+</html>

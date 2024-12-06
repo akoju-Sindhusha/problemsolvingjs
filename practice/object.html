@@ -1,0 +1,60 @@
+let obj = {
+    name: "sindhu",
+    age: 20,
+    address: {
+        d_no: 45,
+        street: "street2"
+    },
+    marks: [35, 45, 60, 55, 93],
+    is_married: false
+};
+
+// -Convert the object to a string and remove the curly braces
+let objString = JSON.stringify(obj, null, 2);
+objString = objString.slice(1, -1); // -Remove the first and last characters (curly braces)
+
+console.log(objString);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+let obj = {
+    name: "sindhu",
+    age: 20,
+    address: {
+        d_no: 45,
+        street: "street2"
+    },
+    marks: [35, 45, 60, 55, 93],
+    is_married: false
+};
+
+len=0;               //-to find out the length of the obj
+for(i in obj){
+    console.log(i);
+    len++
+}
+console.log(len)
+
+/////////output:-.
+name
+age
+address
+marks
+is_married
+5
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+delete obj.address                --to delete 
+console.log(Object.keys(obj))     --to print keys 
+console.log(Object.values(obj))   --to print values
+console.log(Object.entries(obj))  --to print obj in array
+
+
+
+

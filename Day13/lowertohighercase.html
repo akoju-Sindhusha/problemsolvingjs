@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let str = "JAVa ScRipT";
+    console.log("string :",str);
+    
+    upper = "";
+    lower = "";
+    for (i of str) {
+      if (i !== " ") {
+        if (i.toUpperCase() == i) {
+          upper += i;
+        } else {
+          lower += i;
+        }
+      }
+    }
+    console.log("upper to lowercase :",upper.toLowerCase());
+    console.log("lower to uppercase :",lower.toUpperCase());
+
+  </script>
+
+</body>
+
+</html>

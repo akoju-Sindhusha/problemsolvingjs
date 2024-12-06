@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    str = "THIS is a JAVAscript";
+    up = " ";
+    lower = " ";
+    U_count = 0;
+    L_count = 0;
+    spaces = 0;
+    for (i in str) {
+      if (str[i] == str[i].toUpperCase() && str[i] !== " ") {
+        up += str[i];
+        U_count++;
+      } else if (str[i] == str[i].toLowerCase() && str[i] !== " ") {
+        lower += str[i];
+        L_count++;
+      } else {
+        spaces++;
+      }
+    }
+    console.log("Uppercases are :",up);
+    console.log("Lowercases are :",lower);
+    console.log("Number of uppercases", U_count);
+    console.log("Number of lowercases", L_count);
+    console.log("Number of spaces", spaces);
+
+  </script>
+</body>
+
+</html>

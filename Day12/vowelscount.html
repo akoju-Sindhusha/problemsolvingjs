@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "This Is JAVAscript";
+        v_count = 0;
+        c_count = 0;
+        vowels = "";
+        cons = "";
+        for (i of str) {
+            if (i == "a" || i == "e" || i == "i" || i == "o" || i == "u" || i == "A" || i == "E" || i == "I" || i == "O" || i == "U") {
+                vowels += i;
+                v_count++;
+            }
+            if (i !== "a" && i !== "e" && i !== "i" && i !== "o" && i !== "u" && i !== "A" && i !== "E" && i !== "I" && i !== "O" && i !== "U" && i !== " ") {
+                cons += i;
+                c_count++;
+            }
+        }
+        console.log("Vowels are :",vowels);
+        console.log("Consonants are :",cons);
+        console.log("Count of vowels", v_count);
+        console.log("Count of consonants", c_count);
+
+    </script>
+</body>
+
+</html>

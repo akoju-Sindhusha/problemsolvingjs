@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS prsctice</title>
+</head>
+<body>
+    <script>
+/* 
+        
+ 1-----to create an arrow function for power values
+    const power=(a,b)=>{
+        console.log(a**b);
+    }
+    power(2,2);  op: 4
+    power(0,2);  op: 0
+    power(2,0);  op: 1
+    power(2,-2);  op: 0.25
+    power(-2,2);  op: 4
+    power(-2,-2);  op: 0.25
+
+
+2-----to perform add operation if the given 2 values are greater than 20
+    function add(a,b){
+        if (a>20 && b>20){
+            console.log(a+b);
+       }else{
+           console.log("enter the values greater than 20!")
+       }
+    }
+    add(20,30)   op:enter the values greater than 20!
+
+
+3-----login form, to check user details are correct,if wrong show where the invalid detail is
+    let u = "user";    
+    let p = "password";
+
+    function login(){
+    if(u==="user" && p==="password"){
+        console.log("welcome to the website");    //welcome to the website
+    }else if(u!=="user" && p==="password"){
+        console.log("invalid user name");
+    }else if(u==="user" && p!=="password"){
+        console.log("invalid password");
+    }else{
+        console.log("enter valid details");
+    }
+    }
+    console.log(login())       //undefined because no return value,we have to use reture when erver console is used
+    
+    function show() {
+        if (login(u, p)) {     //welcome to the wbsite
+            console.log("secret data");
+            return true
+        } else {
+            console.log("pls login");        //pls login
+            return false
+            }
+        }
+        console.log(show());
+
+
+        op:welcome to the website
+           undefined
+           welcome to the website
+           pls login
+           false
+
+        undefined is came because there is no return value
+
+        let user="name"
+let password="secret"
+
+function login(u,p){
+    if(user==="name" && password==="secret"){
+        console.log("welcome to the website ")
+        return true;
+    }else if(user!=="name" && password==="secret"){
+        console.log("invalid username")
+        return false;
+    }else if(user==="name" && password!=="secret"){
+        console.log("invalid password")
+        return false;
+    } else{
+        console.log("enter valid details")
+        return false;
+    }
+}
+function show(){
+    if(login(user,password)){
+        console.log("logined successfully")
+    }else{
+        console.log("pls login")
+    }
+}
+show()
+output:-
+welcome to the website 
+logined successfully
+
+    
+ 4-----print js is great 100 times
+        for (i = 1; i <= 100; i++) {
+            console.log(i, "JS is great");
+
+        }
+        console.log(i);  
+    //op:1 js is greate
+        2 js is great
+       ....99 js is greate
+       100 is is greate
+       101
+               
+       101 came beacuse console is outside before checking condition it will increment
+
+5-----using while loop to increment
+    j = 1;
+    while (j <= 10) {
+        console.log(j);
+        j++;
+    }            op: 1 to 10
+
+6-----giving console after while loop
+    j = 1;
+    while (j <= 10) {
+        j++;
+    }
+    console.log(j);        op:11
+
+
+// 3 tasks: 1.vote 2.money withdraw 3.speed limit
+
+T1-----vote based on there age
+    let age=+prompt("enter your age:");
+
+    if (age>0){
+        if(age>18){
+            console.log("you are egligible to vote");
+        }else if(age<18){
+            console.log("wait until you 18 year of age");
+        }else{
+            console.log("invalid");
+        }
+    }else{
+        console.log("enter valid age")
+    }
+   
+T2-----money withdraw from diff banking with discount
+let card=prompt("enter your bankcard name(lowercase):")
+let amt=+prompt("enter the amout to withdraw:");
+let damount=0;
+
+const sbid=20;
+const hdfcd=10;
+if(card=="sbi"){
+    damount=(amt*sbid)/100;
+    console.log("final ammount is",damount);
+}else if(card=="hdfc"){
+    damount=(amt*hdfcd)/100;
+    console.log("final ammount is",damount);
+}else{
+    console.log("no discount")
+}
+
+
+
+
+
+ */
+    </script>
+    
+</body>
+</html>

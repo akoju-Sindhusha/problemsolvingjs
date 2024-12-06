@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         console.log("print the elements according to their row number :")
+      let num = 5;
+      count = 1;
+      for (i = 1; i <= num; i++) {
+        s3 = " ";
+        for (j = 1; j <= i; j++) {
+          if (count < 10) {
+            s3 = s3 + "0" + count + " ";
+            count++;
+          } else {
+            s3 = s3 + count + " ";
+            count++;
+          }
+        }
+        console.log(s3);
+      }
+    </script>  
+</body>
+</html>
